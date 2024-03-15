@@ -1,0 +1,12 @@
+<form [formGroup]="todoForm" (ngSubmit)="onTodoAdd()">
+  <div class="form-group">
+    <label for="todoItem">Todo Item*</label>
+   <input type="text" class="form-control" formControlName="todoItem">
+  </div>
+  <p class="alert alert-danger" *ngIf="todoForm.invalid && todoForm.touched">
+   This is required field
+  </p>
+  <div class="text-right">
+    <button class="btn btn-outline-info">Add Todo Item</button>
+  </div>
+</form>
